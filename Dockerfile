@@ -5,6 +5,7 @@ RUN apt-get update \
 	apt-utils \
 	ca-certificates \
 	curl \
+	geoip-database \
 	git \
 	unzip \
 	php-apcu \
