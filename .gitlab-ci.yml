@@ -4,12 +4,14 @@ stages:
   - build
   - push
 build:
+  stage: build
   script:
     - docker info
     - docker image ls
     - docker build -t natanfelles/php-base:latest .
     - docker image ls
 push:
+  stage: push
   only:
     - master
   script:
