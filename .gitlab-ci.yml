@@ -1,0 +1,17 @@
+---
+image: docker:stable
+stages:
+  - build
+  - push
+build:
+  script:
+    - docker info
+    - docker image ls
+    - docker build -t natanfelles/php-base:latest .
+    - docker image ls
+push:
+  only:
+    - master
+  script:
+    - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+    - docker push natanfelles/php-base:latest && docker image rm natanfelles/php-base:latest
