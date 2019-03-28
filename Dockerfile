@@ -1,8 +1,8 @@
 FROM debian:buster
 ENV TERM=linux
-RUN apt-get update \
-	&& apt-get -y --no-install-recommends install \
-	apt-utils \
+RUN echo "debconf debconf/frontend select Noninteractive" | debconf-set-selections; \
+	apt-get update \
+	&& apt-get -yqq --no-install-recommends install \
 	ca-certificates \
 	curl \
 	geoip-database \
@@ -30,8 +30,12 @@ RUN apt-get update \
 	php7.3-xml \
 	php7.3-yaml \
 	php7.3-zip \
+	sudo \
 	&& apt-get clean \
 	&& curl -sS https://getcomposer.org/installer \
 	| php -- --install-dir=/usr/local/bin --filename=composer \
-	&& rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /usr/share/doc/*
+	&& rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /usr/share/doc/*; \
+	useradd -rm -d /home/username -s /bin/bash -g root -G sudo -u 1000 username
+USER username
+WORKDIR /home/username
 CMD ["php", "-a"]
