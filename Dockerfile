@@ -3,7 +3,7 @@ ENV TERM=linux
 RUN echo "debconf debconf/frontend select Noninteractive" \
 		| debconf-set-selections; \
 	apt-get update \
-	&& apt-get -yqq --no-install-recommends install \
+	&& apt-get -y --no-install-recommends install \
 	ca-certificates \
 	curl \
 	geoip-database \
