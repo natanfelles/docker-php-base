@@ -1,4 +1,4 @@
-FROM debian:buster
+FROM debian:testing
 ENV TERM=linux
 RUN echo "debconf debconf/frontend select Noninteractive" \
 		| debconf-set-selections; \
