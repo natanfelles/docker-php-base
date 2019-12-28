@@ -7,7 +7,6 @@ RUN echo "debconf debconf/frontend select Noninteractive" \
 	ca-certificates \
 	curl \
 	geoip-database \
-	geoip-database-extra \
 	git \
 	graphviz \
 	php-apcu \
