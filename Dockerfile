@@ -3,6 +3,10 @@ ENV TERM=linux
 RUN echo "debconf debconf/frontend select Noninteractive" \
 		| debconf-set-selections; \
 	apt-get update \
+	&& apt-get -y install wget apt-transport-https lsb-release ca-certificates \
+	&& wget -O /etc/apt/trusted.gpg.d/php.gpg https://packages.sury.org/php/apt.gpg \
+	&& echo "deb https://packages.sury.org/php/ buster main" > /etc/apt/sources.list.d/php.list \
+	&& apt-get update \
 	&& apt-get -y --no-install-recommends install \
 	ca-certificates \
 	curl \
