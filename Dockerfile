@@ -1,4 +1,4 @@
-FROM ubuntu:bionic
+FROM ubuntu:focal
 ENV TERM=linux
 RUN echo "debconf debconf/frontend select Noninteractive" \
 		| debconf-set-selections; \
