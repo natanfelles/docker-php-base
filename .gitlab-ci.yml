@@ -9,7 +9,7 @@ build:
   stage: build
   script:
     - docker info
-    - docker build -t natanfelles/php-base:latest .
+    - docker build -t $IMAGE_LATEST .
 push:
   stage: push
   only:
