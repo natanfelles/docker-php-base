@@ -35,8 +35,9 @@ RUN echo "debconf debconf/frontend select Noninteractive" \
 	php7.4-zip \
 	unzip \
 	&& apt-get clean \
-	&& curl -sS https://getcomposer.org/installer \
-		| php -- --install-dir=/usr/local/bin --filename=composer \
+	&& curl -sS https://getcomposer.org/composer-2.phar -o composer \
+	&& chmod +x composer \
+	&& mv composer /usr/local/bin/composer \
 	&& curl -sSL https://github.com/phpDocumentor/phpDocumentor/releases/download/v3.0.0-rc/phpDocumentor.phar -o /usr/local/bin/phpDocumentor.phar \
 	&& curl -sSL https://github.com/phpDocumentor/phpDocumentor/releases/download/v3.0.0-rc/phpDocumentor.phar.asc -o /usr/local/bin/phpDocumentor.phar.asc \
 	&& chmod +x /usr/local/bin/phpDocumentor.phar \
