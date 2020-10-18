@@ -12,24 +12,24 @@ RUN echo "debconf debconf/frontend select Noninteractive" \
 	geoip-database \
 	git \
 	graphviz \
-	php-apcu \
-	php-geoip \
-	php-igbinary \
-	php-memcached \
-	php-msgpack \
-	php-redis \
-	php-xdebug \
+	php7.4-apcu \
 	php7.4-cli \
 	php7.4-curl \
 	php7.4-fpm \
 	php7.4-gd \
+	php7.4-geoip \
+	php7.4-igbinary \
 	php7.4-imap \
 	php7.4-intl \
 	php7.4-json \
 	php7.4-mbstring \
+	php7.4-memcached \
+	php7.4-msgpack \
 	php7.4-mysql \
 	php7.4-opcache \
 	php7.4-readline \
+	php7.4-redis \
+	php7.4-xdebug \
 	php7.4-xml \
 	php7.4-yaml \
 	php7.4-zip \
