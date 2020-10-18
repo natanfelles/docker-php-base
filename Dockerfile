@@ -9,7 +9,6 @@ RUN echo "debconf debconf/frontend select Noninteractive" \
 	&& apt-get -y --no-install-recommends install \
 	ca-certificates \
 	curl \
-	geoip-database \
 	git \
 	graphviz \
 	php7.4-apcu \
@@ -17,7 +16,6 @@ RUN echo "debconf debconf/frontend select Noninteractive" \
 	php7.4-curl \
 	php7.4-fpm \
 	php7.4-gd \
-	php7.4-geoip \
 	php7.4-igbinary \
 	php7.4-imap \
 	php7.4-intl \
