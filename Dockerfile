@@ -36,8 +36,8 @@ RUN echo "debconf debconf/frontend select Noninteractive" \
 	&& curl -sS https://getcomposer.org/composer-2.phar -o composer \
 	&& chmod +x composer \
 	&& mv composer /usr/local/bin/composer \
-	&& curl -sSL https://github.com/phpDocumentor/phpDocumentor/releases/download/v3.0.0-rc/phpDocumentor.phar -o /usr/local/bin/phpDocumentor.phar \
-	&& curl -sSL https://github.com/phpDocumentor/phpDocumentor/releases/download/v3.0.0-rc/phpDocumentor.phar.asc -o /usr/local/bin/phpDocumentor.phar.asc \
+	&& curl -sSL https://github.com/phpDocumentor/phpDocumentor/releases/download/v3.0.0/phpDocumentor.phar -o /usr/local/bin/phpDocumentor.phar \
+	&& curl -sSL https://github.com/phpDocumentor/phpDocumentor/releases/download/v3.0.0/phpDocumentor.phar.asc -o /usr/local/bin/phpDocumentor.phar.asc \
 	&& chmod +x /usr/local/bin/phpDocumentor.phar \
 	&& ln -s /usr/local/bin/phpDocumentor.phar /usr/local/bin/phpdoc \
 	&& rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /usr/share/doc/*
