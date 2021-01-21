@@ -32,6 +32,7 @@ RUN echo "debconf debconf/frontend select Noninteractive" \
 	php8.0-zip \
 	unzip \
 	&& apt-get clean \
+	&& echo "xdebug.mode=coverage" >> /etc/php/8.0/cli/conf.d/20-xdebug.ini \
 	&& curl -sS https://getcomposer.org/composer-2.phar -o composer \
 	&& chmod +x composer \
 	&& mv composer /usr/local/bin/composer \
