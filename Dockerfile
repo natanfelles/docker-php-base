@@ -11,26 +11,25 @@ RUN echo "debconf debconf/frontend select Noninteractive" \
 	curl \
 	git \
 	graphviz \
-	php7.4-apcu \
-	php7.4-cli \
-	php7.4-curl \
-	php7.4-fpm \
-	php7.4-gd \
-	php7.4-igbinary \
-	php7.4-imap \
-	php7.4-intl \
-	php7.4-json \
-	php7.4-mbstring \
-	php7.4-memcached \
-	php7.4-msgpack \
-	php7.4-mysql \
-	php7.4-opcache \
-	php7.4-readline \
-	php7.4-redis \
-	php7.4-xdebug \
-	php7.4-xml \
-	php7.4-yaml \
-	php7.4-zip \
+	php8.0-apcu \
+	php8.0-cli \
+	php8.0-curl \
+	php8.0-fpm \
+	php8.0-gd \
+	php8.0-igbinary \
+	php8.0-imap \
+	php8.0-intl \
+	php8.0-mbstring \
+	php8.0-memcached \
+	php8.0-msgpack \
+	php8.0-mysql \
+	php8.0-opcache \
+	php8.0-readline \
+	php8.0-redis \
+	php8.0-xdebug \
+	php8.0-xml \
+	php8.0-yaml \
+	php8.0-zip \
 	unzip \
 	&& apt-get clean \
 	&& curl -sS https://getcomposer.org/composer-2.phar -o composer \
