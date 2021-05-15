@@ -33,9 +33,8 @@ RUN echo "debconf debconf/frontend select Noninteractive" \
 	unzip \
 	&& apt-get clean \
 	&& echo "xdebug.mode=coverage" >> /etc/php/8.0/cli/conf.d/20-xdebug.ini \
-	&& curl -sS https://getcomposer.org/composer-2.phar -o composer \
-	&& chmod +x composer \
-	&& mv composer /usr/local/bin/composer \
+	&& curl -sS https://getcomposer.org/composer-2.phar -o /usr/local/bin/composer \
+	&& chmod +x /usr/local/bin/composer \
 	&& curl -sSL https://gitlab.com/natanfelles/phpdoc/-/raw/master/phpDocumentor.phar -o /usr/local/bin/phpdoc \
 	&& chmod +x /usr/local/bin/phpdoc \
 	&& rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /usr/share/doc/*
