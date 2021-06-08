@@ -33,6 +33,7 @@ RUN echo "debconf debconf/frontend select Noninteractive" \
 	unzip \
 	&& apt-get clean \
 	&& echo "xdebug.mode=coverage" >> /etc/php/8.0/cli/conf.d/20-xdebug.ini \
+	&& sed -i "s/;mysqli.allow_local_infile = On/mysqli.allow_local_infile = On/" /etc/php/8.0/cli/php.ini \
 	&& curl -sS https://getcomposer.org/download/latest-2.x/composer.phar -o /usr/local/bin/composer \
 	&& chmod +x /usr/local/bin/composer \
 	&& curl -sSL https://gitlab.com/natanfelles/phpdoc/-/raw/master/phpDocumentor.phar -o /usr/local/bin/phpdoc \
