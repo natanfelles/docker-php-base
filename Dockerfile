@@ -11,6 +11,7 @@ RUN echo "debconf debconf/frontend select Noninteractive" \
 	curl \
 	git \
 	graphviz \
+	openssh-client \
 	php8.0-apcu \
 	php8.0-cli \
 	php8.0-curl \
